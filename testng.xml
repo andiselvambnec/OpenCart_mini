@@ -4,7 +4,6 @@
   <test thread-count="1" name="Test">
     <classes>
       <class name="com.OpenCart.testCases.TC001_Register"/>
-      <class name="com.OpenCart.testCases.TC002_Register"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
