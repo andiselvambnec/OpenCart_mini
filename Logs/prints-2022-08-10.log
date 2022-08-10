@@ -1,0 +1,7 @@
+15:37:59.504 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.ratio: 8
+15:37:59.507 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.chunkSize: 32
+15:37:59.507 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.blocking: false
+15:38:00.371 [AsyncHttpClient-1-2] DEBUG - brotli4j not in the classpath; Brotli support will be unavailable.
+15:38:00.569 [main] DEBUG - -Dio.netty.initialSeedUniquifier: 0x9eed392c0befb4f9
+15:38:00.758 [main] INFO  - Register test Started
+15:38:01.714 [main] INFO  - https://demo.opencart.com/ was opened Successfully

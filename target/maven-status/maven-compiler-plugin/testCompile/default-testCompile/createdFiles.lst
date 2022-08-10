@@ -1,0 +1,3 @@
+com\OpenCart\testCases\BaseClass.class
+com\OpenCart\pageObjects\HomePage.class
+com\OpenCart\testCases\TC001_Register.class
