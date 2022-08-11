@@ -1,1 +1,3 @@
-18:20:02.034 [main] INFO  - Redirecting to Register Page Successful
+13:48:54.513 [main] INFO  - Redirecting to Register Page Successful
+13:48:54.527 [main] ERROR - Title Not Matching & Redirect to Register Page failed
+13:48:54.558 [AsyncHttpClient-1-4] TRACE - Encoding WebSocket Frame opCode=8 length=26

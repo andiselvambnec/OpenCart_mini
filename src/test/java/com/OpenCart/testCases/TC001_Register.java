@@ -17,8 +17,8 @@ public class TC001_Register extends BaseClass{
 		hp.RegisterClick();
 		log.info("Redirecting to Register Page Successful");
 		String title=driver.getTitle();
-		if(title.equalsIgnoreCase("Register Account")){
-			Assert.assertEquals("Register Account",title);
+		if(title.equalsIgnoreCase("Reister Account")){
+			Assert.assertEquals("Reister Account",title);
 		}
 		else{
 			log.error("Title Not Matching & Redirect to Register Page failed");
