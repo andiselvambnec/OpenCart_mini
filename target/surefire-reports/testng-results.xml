@@ -2,16 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-11T13:48:48 IST" name="Suite" finished-at="2022-08-11T13:48:54 IST" duration-ms="6877">
+  <suite started-at="2022-08-12T12:03:08 IST" name="Suite" finished-at="2022-08-12T12:03:13 IST" duration-ms="4981">
     <groups>
     </groups>
-    <test started-at="2022-08-11T13:48:48 IST" name="Test" finished-at="2022-08-11T13:48:54 IST" duration-ms="6877">
+    <test started-at="2022-08-12T12:03:08 IST" name="Test" finished-at="2022-08-12T12:03:13 IST" duration-ms="4981">
       <class name="com.OpenCart.testCases.TC001_Register">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.OpenCart.testCases.TC001_Register@7adda9cc]" started-at="2022-08-11T13:48:48 IST" name="setup" finished-at="2022-08-11T13:48:52 IST" duration-ms="4705" status="PASS">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:com.OpenCart.testCases.TC001_Register@4b14c583]" started-at="2022-08-12T12:03:08 IST" name="setup" finished-at="2022-08-12T12:03:11 IST" duration-ms="2970" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@234cff57]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Register()[pri:0, instance:com.OpenCart.testCases.TC001_Register@7adda9cc]" started-at="2022-08-11T13:48:52 IST" name="Register" finished-at="2022-08-11T13:48:54 IST" duration-ms="1765" status="FAIL">
+        <test-method signature="Register()[pri:0, instance:com.OpenCart.testCases.TC001_Register@4b14c583]" started-at="2022-08-12T12:03:11 IST" name="Register" finished-at="2022-08-12T12:03:12 IST" duration-ms="1387" status="FAIL">
           <exception class="java.lang.AssertionError">
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError
@@ -53,7 +60,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Register -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.OpenCart.testCases.TC001_Register@7adda9cc]" started-at="2022-08-11T13:48:54 IST" name="tearDown" finished-at="2022-08-11T13:48:54 IST" duration-ms="345" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.OpenCart.testCases.TC001_Register@4b14c583]" started-at="2022-08-12T12:03:13 IST" name="tearDown" finished-at="2022-08-12T12:03:13 IST" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

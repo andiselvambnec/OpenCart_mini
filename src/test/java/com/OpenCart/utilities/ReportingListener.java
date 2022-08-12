@@ -1,8 +1,14 @@
 package com.OpenCart.utilities;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -24,14 +30,15 @@ public class ReportingListener extends BaseClass implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd-hh.mm.ss").format(new Date());
 		String reportname = "MyReport" + timestamp + ".html";
-		htmlreport = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/extent-report/"+reportname);
+		htmlreport = new ExtentHtmlReporter(
+		System.getProperty("user.dir") + "/test-output/extent-report/" + reportname);
 		htmlreport.config().setDocumentTitle("OpenCart Automation");
 		htmlreport.config().setReportName("OpenCart-mini");
 		htmlreport.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlreport);
 		extent.setSystemInfo("Tester", "AS");
-		test=extent.createTest(result.getName());
+		test = extent.createTest(result.getName());
 	}
 
 	@Override
@@ -41,37 +48,54 @@ public class ReportingListener extends BaseClass implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test=extent.createTest(result.getName());
+		test = extent.createTest(result.getName());
 		test.log(Status.FAIL, "Test Failed is " + result.getName());
 		test.log(Status.FAIL, "Test Failed is " + result.getThrowable());
+
+		//WebDriver driver = null;
+		ITestContext context = result.getTestContext();
+	    driver = (WebDriver) context.getAttribute("WebDriver1");
+		
+			//driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+		try {
+			String locationOfSS=ScreenShotSelenium(driver,"selvam");
+			test.addScreenCaptureFromPath(locationOfSS);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		test=extent.createTest(result.getName());
+		test = extent.createTest(result.getName());
 		test.log(Status.SKIP, "Test Skipped is " + result.getName());
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
-		//ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+		// ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
 		// TODO Auto-generated method stub
-		//ITestListener.super.onTestFailedWithTimeout(result);
+		// ITestListener.super.onTestFailedWithTimeout(result);
 	}
 
 	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
-		//ITestListener.super.onStart(context);
+		// ITestListener.super.onStart(context);
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
 		extent.flush();
 	}
+
 }

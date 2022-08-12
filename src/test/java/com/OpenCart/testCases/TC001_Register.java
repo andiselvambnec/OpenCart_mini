@@ -18,7 +18,7 @@ public class TC001_Register extends BaseClass{
 		log.info("Redirecting to Register Page Successful");
 		String title=driver.getTitle();
 		if(title.equalsIgnoreCase("Reister Account")){
-			Assert.assertEquals("Reister Account",title);
+			Assert.assertEquals("Regster Account",title);
 		}
 		else{
 			log.error("Title Not Matching & Redirect to Register Page failed");
